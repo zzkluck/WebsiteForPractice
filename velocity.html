@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>飞行程序设计中关于空速的计算</title>
+    <script src="FPD.js"></script>
+    <script src="js_02.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <noscript>
+        <h2>This page requires JavaScript.</h2>
+    </noscript>
+    <div>
+        <form>
+            <select id="flightTypeSelector">
+                <option selected value="-1">选择一个飞行阶段</option>
+                <option value="0">跑道入口</option>
+                <option value="1">起始进近</option>
+                <option value="2">最后进近</option>
+                <option value="3">目视机动（盘旋）</option>
+                <option value="4">中间复飞</option>
+                <option value="5">最后复飞</option>
+            </select>
+            <br>
+            <select id="airplaneTypeSelector">
+                <option selected value="-1">选择一个飞行器类型</option>
+                <option value="0">A</option>
+                <option value="1">B</option>
+                <option value="2">C</option>
+                <option value="3">D</option>
+                <option value="4">E</option>
+                <option value="5">H</option>
+            </select>
+            <br> 速度缩放系数（1或1.1）：
+            <br>
+            <input type="text" value="1" id="zoom"></input>
+            <br> 飞行器高度：
+            <br>
+            <input type="text" value="0" id="height"></input>
+            <br> 与标准大气温度差值：
+            <br>
+            <input type="text" value="0" id="dif"></input>
+            <br> 转弯坡度：
+            <br>
+            <input type="text" value="0" id="slope"></input>
+            <br>
+        </form>
+    </div>
+    <button id="btn">你已经点击了这个毫无意义的按钮
+        <span id="joke">0</span>次</button>
+    <div>
+        指示空速：
+        <span id="iasR" class="result">0</span> km/h
+        <br> 转换因子k：
+        <span id="kR" class="result">0</span>
+        <br> 真空速：
+        <span id="tasR" class="result">0</span> km/h
+        <br> 转弯率：
+        <span id="rateR" class="result">0</span> 度/s
+        <br> 转弯半径：
+        <span id="radiusR" class="result">0</span> m
+        <br>
+    </div>
+</body>
+
+</html>
