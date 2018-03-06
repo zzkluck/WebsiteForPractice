@@ -1,4 +1,3 @@
-var i = 0;
 window.onload = function () {
     document.getElementById("btn").onclick = joke;
     document.getElementById("flightTypeSelector").onchange = calculate;
@@ -7,11 +6,6 @@ window.onload = function () {
     document.getElementById("height").onchange = calculate;
     document.getElementById("dif").onchange = calculate;
     document.getElementById("slope").onchange = calculate;
-}
-
-function joke() {
-    i = i + 1;
-    document.getElementById("joke").innerHTML = i;
 }
 
 function calculate() {
@@ -32,11 +26,11 @@ function calculate() {
         var rate = turningRate(tas, slope);
         var radius = turningRadius(tas, slope);
 
-        document.getElementById("iasR").innerHTML = ias;
-        document.getElementById("kR").innerHTML = k;
-        document.getElementById("tasR").innerHTML = tas;
-        document.getElementById("rateR").innerHTML = rate;
-        document.getElementById("radiusR").innerHTML = radius;
+        document.getElementById("iasR").innerHTML = ias.toFixed(2);
+        document.getElementById("kR").innerHTML = k.toFixed(2);
+        document.getElementById("tasR").innerHTML = tas.toFixed(2);
+        document.getElementById("rateR").innerHTML = rate.toFixed(2);
+        document.getElementById("radiusR").innerHTML = radius.toFixed(2);
     }
 
 }

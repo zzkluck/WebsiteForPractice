@@ -3,3 +3,12 @@
     font-weight: bold;
     color: #66CCFF;
 }
+
+.arguPhoto{
+    height: 400px;
+}
+
+body {
+	font-family: PingFangSC-Regular, Verdana, Arial, '微软雅黑','宋体';
+	font-size: 14px;
+}

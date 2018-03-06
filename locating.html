@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>过台定位容差区相关计算</title>
+    <script src="FPD.js"></script>
+    <script src="locating.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <noscript>
+        <h2>This page requires JavaScript.</h2>
+    </noscript>
+    <div id="navfirst">
+        <ul id="menu">
+            <li id="h">
+                <a href="./velocity.html" title="飞行器速度相关计算">飞行器速度</a>
+            </li>
+            <li id="b">
+                <a href="./locating.html" title="过台飞行盲区相关计算">过台飞行盲区</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <form>
+            <select id="navTypeSelector">
+                <option selected value="-1">选择一类导航台</option>
+                <option value="0">VOR</option>
+                <option value="1">NDB</option>
+            </select>
+            <br>
+            <br> 飞行高度：
+            <input type="number" value="0" id="height"></input>
+        </form>
+    </div>
+    <button id="btn">你已经点击了这个毫无意义的按钮
+        <span id="joke">0</span>次</button>
+    <div>
+        导航台盲区半径 r：
+        <span id="rR" class="result">0</span> m
+        <br> x1:
+        <span id="x1R" class="result">0</span> m
+        <br> y1：
+        <span id="y1R" class="result">0</span> m
+        <br> x2：
+        <span id="x2R" class="result">0</span> m
+        <br> y2：
+        <span id="y2R" class="result">0</span> m
+        <br>
+    </div>
+    <img src="./navShadowArgu.jpg" rel="导航台定位容差区参数" class="arguPhoto" />
+    <br> 上图参照教材20页图1-15,图1-16.
+</body>
+
+</html>

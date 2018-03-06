@@ -21,10 +21,43 @@ function angle2radian(angle) {
     return angle * pi / 180.0;
 }
 
+function tanAngle(angle) {
+    return Math.tan(angle2radian(angle));
+}
+function sinAngle(angle) {
+    return Math.sin(angle2radian(angle));
+}
+function cosAngle(angle) {
+    return Math.cos(angle2radian(angle));
+}
 function turningRate(tas, slope) {
-    return 180 * g / pi * Math.tan(angle2radian(slope)) / tas;
+    return 180 * g / pi * tanAngle(slope) / tas;
 }
 
 function turningRadius(tas, slope) {
-    return Math.pow(tas, 2) / g / Math.tan(angle2radian(slope));
+    return Math.pow(tas / 3.6, 2) / g / tanAngle(slope);
+}
+
+var errors = new Array(
+    {"shadow":50,"enterError":5,"headingError":5},
+    {"shadow":40,"enterError":15,"headingError":5}
+)
+
+function getNavShadowArgus(navType, height) {
+    var navInfo = errors[navType];
+    var radius = height * tanAngle(navInfo["shadow"]);
+    var alpha2 = navInfo["enterError"];
+    var x2 = radius * cosAngle(alpha2);
+    var y2 = radius * sinAngle(alpha2);
+    var alpha1 = 2 * navInfo["headingError"] + navInfo["enterError"];
+    var x1 = radius * cosAngle(alpha1);
+    var y1 = radius * sinAngle(alpha1);
+    return {"r":radius,"x1":x1,"y1":y1,"x2":x2,"y2":y2};
+}
+
+
+var i = 0;
+function joke() {
+    i = i + 1;
+    document.getElementById("joke").innerHTML = i;
 }

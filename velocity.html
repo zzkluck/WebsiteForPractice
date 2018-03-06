@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>飞行程序设计中关于空速的计算</title>
     <script src="FPD.js"></script>
     <script src="js_02.js"></script>
@@ -13,6 +14,16 @@
     <noscript>
         <h2>This page requires JavaScript.</h2>
     </noscript>
+    <div id="navfirst">
+            <ul id="menu">
+                <li id="h">
+                    <a href="./velocity.html" title="飞行器速度相关计算">飞行器速度</a>
+                </li>
+                <li id="b">
+                    <a href="./locating.html" title="过台飞行盲区相关计算">过台飞行盲区</a>
+                </li>
+            </ul>
+        </div>
     <div>
         <form>
             <select id="flightTypeSelector">
@@ -36,16 +47,16 @@
             </select>
             <br> 速度缩放系数（1或1.1）：
             <br>
-            <input type="text" value="1" id="zoom"></input>
+            <input type="number" value="1" id="zoom"></input>
             <br> 飞行器高度：
             <br>
-            <input type="text" value="0" id="height"></input>
+            <input type="number" value="0" id="height"></input>
             <br> 与标准大气温度差值：
             <br>
-            <input type="text" value="0" id="dif"></input>
+            <input type="number" value="0" id="dif"></input>
             <br> 转弯坡度：
             <br>
-            <input type="text" value="0" id="slope"></input>
+            <input type="number" value="0" id="slope"></input>
             <br>
         </form>
     </div>
