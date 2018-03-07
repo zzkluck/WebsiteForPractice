@@ -1,4 +1,5 @@
 window.onload = function () {
+    document.getElementById("form").onsubmit = function(){return false;}
     document.getElementById("btn").onclick = joke;
     document.getElementById("navTypeSelector").onchange = calculate;
     document.getElementById("height").onchange=calculate;

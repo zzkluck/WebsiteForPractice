@@ -5,10 +5,15 @@
 }
 
 .arguPhoto{
-    height: 400px;
+    height: 300px;
 }
 
 body {
 	font-family: PingFangSC-Regular, Verdana, Arial, '微软雅黑','宋体';
-	font-size: 14px;
+    font-size: 14px;
 }
+
+.navfirst a{display:block;text-align:center;height:30px;}
+.navfirst a:link{color:#666;background: #CCC no-repeat 5px 12px;text-decoration:none;}
+.navfirst a:visited{color:#666;text-decoration:underline;}
+.navfirst a:hover{color:#FFF; font-weight:bold;text-decoration:none;background: #FFCC66 no-repeat 5px 12px;}

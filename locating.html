@@ -12,29 +12,21 @@
 </head>
 
 <body>
-    <noscript>
-        <h2>This page requires JavaScript.</h2>
-    </noscript>
-    <div id="navfirst">
-        <ul id="menu">
-            <li id="h">
-                <a href="./velocity.html" title="飞行器速度相关计算">飞行器速度</a>
-            </li>
-            <li id="b">
-                <a href="./locating.html" title="过台飞行盲区相关计算">过台飞行盲区</a>
-            </li>
-        </ul>
+    <div class="navfirst">
+        <a href="./velocity.html" title="飞行器速度相关计算">飞行器速度</a>
+        <a href="./locating.html" title="过台飞行盲区相关计算">过台飞行盲区</a>
+        <a href="./departure.html" title="离场相关计算">离场相关计算</a>
     </div>
-
+    <hr>
     <div>
-        <form>
+        <form id="form">
             <select id="navTypeSelector">
                 <option selected value="-1">选择一类导航台</option>
                 <option value="0">VOR</option>
                 <option value="1">NDB</option>
             </select>
-            <br>
             <br> 飞行高度：
+            <br>
             <input type="number" value="0" id="height"></input>
         </form>
     </div>

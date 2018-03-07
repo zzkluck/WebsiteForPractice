@@ -1,4 +1,5 @@
 window.onload = function () {
+    document.getElementById("form").onsubmit = function(){return false;}
     document.getElementById("btn").onclick = joke;
     document.getElementById("flightTypeSelector").onchange = calculate;
     document.getElementById("airplaneTypeSelector").onchange = calculate;
