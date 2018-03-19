@@ -31,7 +31,7 @@ function cosAngle(angle) {
     return Math.cos(angle2radian(angle));
 }
 function turningRate(tas, slope) {
-    return 180 * g / pi * tanAngle(slope) / tas;
+    return 180 * g / pi * tanAngle(slope) / (tas /3.6);
 }
 
 function turningRadius(tas, slope) {
